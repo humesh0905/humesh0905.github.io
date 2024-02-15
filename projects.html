@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Babylonica" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Humesh Reddy Venkatapuram</a>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a>Portfolio</a>
+            <ul class="dropdown">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <div class="banner-image">
+                <img src="C:\Users\Humesh Reddy\Videos\website\images\pexels-pixabay-270408.jpg" alt="banner image">
+            </div>
+                <h2 style="color: rgb(98, 181, 170);">Network Security for a ChatGPT-based Chatbot Application</h2>
+                        <p>January 2023 - May 2023, Las Cruces, New Mexico</p>
+                        <p>Developed a secure chat application leveraging OpenAI's ChatGPT.</p>
+                        <p>Implemented encryption, access control, anomaly detection, and conducted security assessments.</p>
+                        <p>Aimed to ensure user data privacy and provide an innovative user experience.</p>
+                        <hr style="border-color: rgb(10, 9, 9); border-width: 2px; width: 100%;">
+                    <h2 style="color: rgb(98, 181, 170);">Converting Finger-Tip Movement Into Text</h2>
+                        <p>August 2022 - December 2022, Las Cruces, New Mexico</p>
+                        <p>Created a real-time system for converting fingertip movements into text using machine learning for character recognition, focusing on a software-based solution over hardware dependency.</p>
+                        <hr style="border-color: rgb(10, 9, 9); border-width: 2px; width: 100%;">
+                    <h2 style="color: rgb(98, 181, 170);">Smart Automatic Question Paper Generator</h2>
+                        <p>June 2021 - September 2021, Hyderabad, India</p>
+                        <p>Developed a Java application with MySQL database for generating question papers akin to GRE, focusing on automation and smart question selection.</p>
+                        <hr style="border-color: rgb(10, 9, 9); border-width: 2px; width: 100%;">
+                    <h2 style="color: rgb(98, 181, 170);">Gyroscope Air Mouse</h2>
+                        <p>January 2021 - May 2021, Tirupati, India</p>
+                        <p>Implemented an air mouse using STM32f4 discovery kit and Python, enhancing desktop interaction through motion sensing technology.</p>
+        </section>
+    </main>
+    <footer>
+        <p>©2024 belongs to HRV.</p>
+    </footer>
+    <script>
+        const toggleThemeButton = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(storedTheme);
+
+        toggleThemeButton.addEventListener('click', function() {
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        function setTheme(theme) {
+            document.body.className = theme === 'dark' ? 'dark-theme' : '';
+            localStorage.setItem('theme', theme);
+            currentTheme = theme;
+            toggleThemeButton.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
+        }
+    </script>
+</body>
+</html>
+``

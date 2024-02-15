@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humesh Website - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Babylonica" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><h1>Humesh Reddy Venkatapuram</h1></a>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a>Portfolio</a>
+            <ul class="dropdown">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="banner-image">
+            <img src="images\banner.jpg" alt="welcome to my website">
+        </div>
+        <p>  </p>
+        <div style="text-align: left;"><img alt="profile.png" height="150" src="C:\Users\Humesh Reddy\Videos\website\images\IMG_0390.jpg" style="float: right; margin: 10px 25px 10px 25px;" width="350" />
+    <p>Hey there,</p>
+    <p>I'm really glad you're here. Take a look around and get to know me better. I've got different pages for you to explore: my hobbies, projects, experiences, and how to get in touch with me.<p>
+    <p>This website is like a digital scrapbook of the things I love and what I've been up to. I hope you find something that interests you!</p>
+    <p>Feel free to click on the different tabs and have a look around. And if you have any questions or just want to say hi, don't hesitate to reach out. I'd love to hear from you!</p>
+    <p>Thanks for visiting and enjoy your time here!</p>
+    <p>Best Regards,</p>
+    <a class="logo"><h1>Humesh Reddy Venkatapuram</h1></a>
+    </main>
+    <div class="qr-container">
+        <img src="C:\Users\Humesh Reddy\Videos\website\images\qrcode_95467124_c49943a951cc7feb3277dd86bac41e55.png" alt="QR Code for Resume" class="qr-code">
+        <p class="qr-description">Scan the above QR code to get my resume.</p>
+    </div>
+    <footer>
+        <p>©2024 belongs to HRV.</p>
+    </footer>
+
+    <script>
+        const toggleThemeButton = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(storedTheme);
+
+        toggleThemeButton.addEventListener('click', function() {
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        function setTheme(theme) {
+            document.body.className = theme === 'dark' ? 'dark-theme' : '';
+            localStorage.setItem('theme', theme);
+            currentTheme = theme;
+            toggleThemeButton.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack the menu items vertically on small screens */
+    }
+
+    nav ul li {
+        width: 100%; /* Full width for each menu item */
+    }
+
+    /* Optionally adjust header h1 font size for smaller screens */
+    header h1 {
+        font-size: 20px; /* Smaller font size for mobile devices */
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humesh Website - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Babylonica" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Humesh Reddy Venkatapuram</a>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a>Portfolio</a>
+            <ul class="dropdown">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>My Hobbies</h2>
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="images/Madras Movie.jpg">
+                    <img src="images/Madras Movie.jpg" alt="Cricket" width="600" height="400">
+                  </a>
+                  <div class="desc">Cricket holds a special place in my heart. Every couple of days, my friends and I gather to play this game. It is not just about physical exercise; it is about reliving childhood memories and connecting with the sheer joy of the sport.</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="images\chess.jpg">
+                    <img src="images\chess.jpg" alt="Chess" width="600" height="400">
+                  </a>
+                  <div class="desc">Chess is one of the favorite game for me. I engage in a daily match, playing at least one game. On online platforms, my Elo rating stands at 1700, and during the pandemic, I even participated in national-level competitions.</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="images\IMG_4093.jpg">
+                    <img src="images\IMG_4093.jpg" alt="Playing golf" width="600" height="400">
+                  </a>
+                  <div class="desc">I have tried golf a few times, and I am a big fan of watching it.</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="images\badminton.jpg">
+                    <img src="images\badminton.jpg" alt="badminton" width="600" height="400">
+                  </a>
+                  <div class="desc">Badminton is another game I absolutely love. During my childhood, I even participated in national-level badminton tournaments. And guess what? At the tender age of 11, I proudly held the title of state champion in my home country!</div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <footer>
+        <p>©2024 belongs to HRV.</p>
+    </footer>
+
+    <script>
+        const toggleThemeButton = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(storedTheme);
+
+        toggleThemeButton.addEventListener('click', function() {
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        function setTheme(theme) {
+            document.body.className = theme === 'dark' ? 'dark-theme' : '';
+            localStorage.setItem('theme', theme);
+            currentTheme = theme;
+            toggleThemeButton.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
+        }
+    </script>
+</body>
+</html>
+``

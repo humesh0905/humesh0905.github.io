@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Babylonica" rel="stylesheet">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 600px)">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Humesh Reddy Venkatapuram</a>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a>Portfolio</a>
+            <ul class="dropdown">
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="banner-image">
+            <img src="C:\Users\Humesh Reddy\Videos\website\images\IMG_0380.jpg" alt="banner image" style="width: 80%; height: auto;">
+        </div>        
+        <section>
+            <h2 style="color: rgb(98, 181, 170);">About Me</h2>
+            <strong style="color: rgb(98, 181, 170);">Hello Everyone,</strong>
+            <p>I am Humesh Reddy Venkatapuram, currently living in Las Cruces, New Mexico. I am passionate about computer science. I am currently pursuing my graduate studies at New Mexico State University, where I am learning advanced topics in artificial intelligence, data science, and software engineering. 
+                <p>Before coming to the US, I completed my undergraduate degree in Bachelors in Computer Science from SRM Institute of Science and Technology, India, where I gained a solid foundation in programming, algorithms, and mathematics. My goal is to find a professional position that will challenge me to apply my problem-solving skills and attention to detail to real-world problems. I am eager to learn new things and further develop my abilities in the field of computer science.</p>
+        </section>
+        <div id="Education">
+            <div class="container">
+                <h1 class="sub-title" style="color: rgb(98, 181, 170);">My Education</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fas fa-code"></i>
+                        <h2 style="color: rgb(98, 181, 170);">Masters in Computer Science</h2>
+                        <p> New Mexico State University  </p>
+                        <br>
+                        <p> Fall 2022-current</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-code"></i>
+                        <h2 style="color: rgb(98, 181, 170);">Bachelor of Technology</h2>
+                        <p> SRM IST (Computer Science)  </p>
+                        <br>
+                        <p> 2017-2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>©2024 belongs to HRV.</p>
+    </footer>
+    <script>
+        const toggleThemeButton = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(storedTheme);
+
+        toggleThemeButton.addEventListener('click', function() {
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        function setTheme(theme) {
+            document.body.className = theme === 'dark' ? 'dark-theme' : '';
+            localStorage.setItem('theme', theme);
+            currentTheme = theme;
+            toggleThemeButton.textContent = theme === 'light' ? 'Dark Mode' : 'Light Mode';
+        }
+    </script>
+</body>
+</html>
